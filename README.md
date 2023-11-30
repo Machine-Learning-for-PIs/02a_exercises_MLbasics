@@ -1,6 +1,6 @@
 # k-Nearest Neighbors Classification Exercise
 
-Today we will get to know the package `scikit-learn` (sklearn). It has many different machine learning algorithms already implemented, so we will be using it for the next five classes. The first algorithm, which we are going to learn today is the k-nearest neighbor algorithm. It can be used for classification as well as for regression.
+Today we will get to know the package `scikit-learn` (sklearn). It has many different machine learning algorithms already implemented, so we will be using it for the next five exercise sheets. The first algorithm, which we are going to learn today is the k-nearest neighbor algorithm. It can be used for classification as well as for regression.
 
 Take a look at the file `src/nn_iris.py`. We will implement the TODOs step by step:
 
@@ -47,7 +47,7 @@ The trained model is now able to receive the input data and produce predictions 
 
 2. The comparison of a predicted and the true label can tell us valuable information about how well our model performs. The simplest performance measure is the ratio of correct predictions to all predictions, called accuracy. Implement a function `compute_accuracy` to calculate the accuracy of predictions. Use your function and evaluate your model by calculating the accuracy on the train set and the test set. Print both results.
 
-3. To evaluate, whether our model performs well, its performance is compared to other models. Since we now only know one classifier, we will compare it to dummy models. Most frequent models always predict the label that occurs the most in our train set. If the train set is balanced, we choose one of the classes. Implement the function `accuracy_most_frequent` to compute the accuracy of the most frequent model. (Hint: the function `numpy.bincount` might be helpful.) Print the result.
+3. (Optional) To evaluate, whether our model performs well, its performance is compared to other models. Since we now only know one classifier, we will compare it to dummy models. Most frequent models always predict the label that occurs the most in our train set. If the train set is balanced, we choose one of the classes. Implement the function `accuracy_most_frequent` to compute the accuracy of the most frequent model. (Hint: the function `numpy.bincount` might be helpful.) Print the result.
 
 4. (Optional) Another dummy model is a stratified model. A stratified model assigns random labels based on the ratio of the labels in the train set. Implement the function `accuracy_stratified` to compute the accuracy of the stratified model. (Hint: `numpy.random.choice` might help.) Call the function several times and print the results. You see that the results are different. In order to reproduce the results, it is usefull to set a seed. Use `numpy.random.seed` before calling the function to set the seed. Set it to 29. 
 
