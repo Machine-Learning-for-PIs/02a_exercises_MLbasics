@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV
 
 sys.path.insert(0, "./src/")
 
-from src.nn_iris import compute_accuracy, accuracy_most_frequent, accuracy_stratified, cv_knearest_classifier
+from src.nn_iris import compute_accuracy, cv_knearest_classifier
 
 
 def test_compute_accuracy():
@@ -16,19 +16,6 @@ def test_compute_accuracy():
     y_pred = np.array([0, 1, 1, 1, 0])
     acc = compute_accuracy(y, y_pred)
     assert np.allclose(acc, 0.8)
-
-def test_accuracy_most_frequent():
-    ytrain = np.array([0, 1, 0, 1, 0, 1, 0, 1, 1])
-    ytest = np.array([1, 0, 1, 1, 1])
-    acc_mf = accuracy_most_frequent(ytrain, ytest)
-    assert np.allclose(acc_mf, 0.8)
-
-def test_accuracy_stratified():
-    np.random.seed(42)  # Set the random seed for reproducibility
-    ytrain = np.array([0, 1, 0, 1, 0, 1, 0, 1, 1])
-    ytest = np.array([1, 0, 1, 1, 1])
-    acc_strat = accuracy_stratified(ytrain, ytest)
-    assert np.allclose(acc_strat, 0.4)
 
 def test_cv_knearest_classifier():
     # Create a dummy dataset

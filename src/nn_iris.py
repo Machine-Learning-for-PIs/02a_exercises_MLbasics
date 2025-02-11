@@ -23,37 +23,6 @@ def compute_accuracy(y: np.ndarray, y_pred: np.ndarray) -> float:
     # TODO: Implement me.
     return None
 
-def accuracy_most_frequent(y_train: np.ndarray, y_test: np.ndarray) -> float:
-    """Compute the accuracy of the most frequent model.
-
-    Most frequent models always predict the label that occurs the most in the train set.
-    They belong to the class of so-called "dummy models", because the prediction is
-    independent of the input. Such models usually serve as a baseline if
-    no other models are available.
-
-    Args:
-        y_train (np.ndarray): The array with the training labels.
-        y_test (np.ndarray): The array with the test labels.
-    Returns:
-        float: The accuracy of the prediction by the most frequent model on the test labels.
-    """
-    # TODO: Implement me.
-    return None
-
-# optional
-def accuracy_stratified(y_train: np.ndarray, y_test: np.ndarray) -> float:
-    """Compute the accuracy of the stratified model.
-
-    A stratified model assigns random labels based on the ratio of the labels in the train set.
-
-    Args:
-        y_train (np.ndarray): The array with the training labels.
-        y_test (np.ndarray): The array with the test labels.
-    Returns:
-        float: The accuracy of the prediction by the stratified model on the test labels.
-    """
-    # TODO: Implement me.
-    return None
 
 def cv_knearest_classifier(x_train: np.ndarray, y_train: np.ndarray) -> GridSearchCV:
     """Train and cross-validate a k-nearest neighbors classifier with the grid search.
@@ -80,24 +49,11 @@ def cv_knearest_classifier(x_train: np.ndarray, y_train: np.ndarray) -> GridSear
 
 if __name__ == "__main__":
     # load iris dataset
-    iris = # TODO
+    iris = load_iris()
 
     # print shape of data matrix and number of target entries
     # TODO
     # print names of labels and of features
-    # TODO
-
-    # (optional) use classes distribution (histogram) to check if iris dataset is balanced:
-    # find out what the next two lines of code do
-    temp = pd.Series(iris.target)
-    target_str = temp.apply(lambda i: iris.target_names[i])
-    # and use 'pandas.Series.hist' function to plot histogram
-    # TODO
-
-    # (optional) use pandas 'scatter_matrix' to visualize some trends in data:
-    # represent iris as pandas data frame
-    # TODO
-    # create scatter matrix from dataframe, color by target; plot matrix
     # TODO
 
     # create train and test split with the ratio 75:25 and print their dimensions
@@ -117,18 +73,7 @@ if __name__ == "__main__":
     # print both accuracies
     # TODO
 
-    # implement and use 'accuracy_most_frequent' to compute accuracy of most frequent model
-    # TODO
-    # print result
-    # TODO
-
-    # (optional) implement and use 'accuracy_stratified' to compute and print accuracy of the stratified model
-    # TODO
-
     # compute confusion matrix for test set
-    # TODO
-
-    # (optional) compute and print test set accuracy from confusion matrix
     # TODO
 
     # plot heatmap of confusion matrix for test set
