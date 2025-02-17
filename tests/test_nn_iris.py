@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV, train_test_split
 
 sys.path.insert(0, "./src/")
 
-from src.nn_iris_solution import compute_accuracy, cv_knearest_classifier
+from src.nn_iris import compute_accuracy, cv_knearest_classifier
 
 
 def test_compute_accuracy():

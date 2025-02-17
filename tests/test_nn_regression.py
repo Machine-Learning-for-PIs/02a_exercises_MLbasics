@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsRegressor
 
 sys.path.insert(0, "./src/")
 
-from src.nn_regression_solution import gs_knearest_regressor
+from src.nn_regression import gs_knearest_regressor
 
 
 def test_gs_knearest_regressor():
